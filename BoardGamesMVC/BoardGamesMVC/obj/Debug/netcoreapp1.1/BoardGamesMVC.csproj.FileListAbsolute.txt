@@ -1,0 +1,10 @@
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.deps.json
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.runtimeconfig.json
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.runtimeconfig.dev.json
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.dll
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.pdb
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.csprojResolveAssemblyReference.cache
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.csproj.CoreCompileInputs.cache
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.AssemblyInfo.cs
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.dll
+D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.pdb
