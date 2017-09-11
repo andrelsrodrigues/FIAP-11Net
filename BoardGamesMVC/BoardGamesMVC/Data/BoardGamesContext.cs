@@ -10,9 +10,13 @@ namespace BoardGamesMVC.Data
 {
     public class BoardGamesContext : DbContext
     {
-        public BoardGamesContext() 
+        public BoardGamesContext()
             : base(new DbContextOptionsBuilder<BoardGamesContext>()
-                                    .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=DBBoardGames;Trusted_Connection=True;MultipleActiveResultSets=true").Options){ }
+                                    .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=DBBoardGames;Trusted_Connection=True;MultipleActiveResultSets=true")
+                                    .Options){ }
+
+        //public BoardGamesContext(DbContextOptions<BoardGamesContext> options)
+        //: base(options) { }
 
 
         public DbSet<BoardGame> BoardGames { get; set; }

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using BoardGamesMVC.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace BoardGamesMVC
 {
@@ -27,8 +29,14 @@ namespace BoardGamesMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<BoardGamesContext>();
+            BoardGamesContext bgContext = new BoardGamesContext();
+            bgContext.Database.EnsureCreated();
+
             // Add framework services.
             services.AddMvc();
+            services.AddEntityFrameworkSqlServer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

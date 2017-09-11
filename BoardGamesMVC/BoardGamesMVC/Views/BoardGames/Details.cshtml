@@ -1,0 +1,54 @@
+@model BoardGamesMVC.Models.BoardGame
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BoardGame</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fabricante)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fabricante)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeMinimaJogadores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeMinimaJogadores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeMaximaJogadores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeMaximaJogadores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DuracaoMediaPartidaEmMinutos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DuracaoMediaPartidaEmMinutos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoJogador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InfoJogador.IdJogador)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdBoardGame">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
