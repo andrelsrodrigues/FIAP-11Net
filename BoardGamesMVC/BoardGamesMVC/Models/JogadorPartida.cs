@@ -10,6 +10,7 @@ namespace BoardGamesMVC.Models
     public class JogadorPartida
     {
         public int PosicaoFinalPartida { get; set; }
+        public int DuracaoPartidaEmMinutos { get; set; }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

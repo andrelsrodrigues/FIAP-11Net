@@ -22,5 +22,8 @@ namespace BoardGamesMVC.Models
 
         public IEnumerable<Partida> PartidasBoardGame { get; set; }
 
+        public int IdJogador { get; set; }
+        public Jogador InfoJogador { get; set; }
+
     }
 }
