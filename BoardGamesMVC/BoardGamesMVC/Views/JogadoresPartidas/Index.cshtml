@@ -43,9 +43,10 @@
                 @Html.DisplayFor(modelItem => item.InfoPartida.IdPartida)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                @Html.ActionLink("Edit", "Edit", new { idPartida = item.IdPartida, idJogador = item.IdJogador }) |
+                @Html.ActionLink("Details", "Details", new { idPartida = item.IdPartida, idJogador = item.IdJogador }) |
+                @Html.ActionLink("Delete", "Delete", new { idPartida = item.IdPartida, idJogador = item.IdJogador })
             </td>
         </tr>
 }

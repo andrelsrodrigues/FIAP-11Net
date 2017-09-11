@@ -27,9 +27,9 @@ namespace BoardGamesMVC.Controllers
         }
 
         // GET: JogadoresPartidas/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? idPartida, int? idJogador)
         {
-            if (id == null)
+            if (idPartida == null || idJogador == null)
             {
                 return NotFound();
             }
@@ -37,7 +37,7 @@ namespace BoardGamesMVC.Controllers
             var jogadorPartida = await _context.JogadoresPartidas
                 .Include(j => j.InfoJogador)
                 .Include(j => j.InfoPartida)
-                .SingleOrDefaultAsync(m => m.IdJogador == id);
+                .SingleOrDefaultAsync(m => m.IdJogador == idJogador && m.IdPartida == idPartida);
             if (jogadorPartida == null)
             {
                 return NotFound();
@@ -73,14 +73,14 @@ namespace BoardGamesMVC.Controllers
         }
 
         // GET: JogadoresPartidas/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? idPartida, int? idJogador)
         {
-            if (id == null)
+            if (idPartida == null || idJogador == null)
             {
                 return NotFound();
             }
 
-            var jogadorPartida = await _context.JogadoresPartidas.SingleOrDefaultAsync(m => m.IdJogador == id);
+            var jogadorPartida = await _context.JogadoresPartidas.SingleOrDefaultAsync(m => m.IdJogador == idJogador && m.IdPartida == idPartida);
             if (jogadorPartida == null)
             {
                 return NotFound();
@@ -95,9 +95,9 @@ namespace BoardGamesMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Pontuacao,PosicaoFinalPartida,IdPartida,IdJogador")] JogadorPartida jogadorPartida)
+        public async Task<IActionResult> Edit(int idPartida, int idJogador, [Bind("Pontuacao,PosicaoFinalPartida,IdPartida,IdJogador")] JogadorPartida jogadorPartida)
         {
-            if (id != jogadorPartida.IdJogador)
+            if (idPartida != jogadorPartida.IdPartida && idJogador != jogadorPartida.IdJogador)
             {
                 return NotFound();
             }
@@ -111,7 +111,7 @@ namespace BoardGamesMVC.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!JogadorPartidaExists(jogadorPartida.IdJogador))
+                    if (!JogadorPartidaExists(jogadorPartida.IdJogador, jogadorPartida.IdPartida))
                     {
                         return NotFound();
                     }
@@ -128,9 +128,9 @@ namespace BoardGamesMVC.Controllers
         }
 
         // GET: JogadoresPartidas/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? idPartida, int? IdJogador)
         {
-            if (id == null)
+            if (idPartida == null && IdJogador == null)
             {
                 return NotFound();
             }
@@ -138,7 +138,7 @@ namespace BoardGamesMVC.Controllers
             var jogadorPartida = await _context.JogadoresPartidas
                 .Include(j => j.InfoJogador)
                 .Include(j => j.InfoPartida)
-                .SingleOrDefaultAsync(m => m.IdJogador == id);
+                .SingleOrDefaultAsync(m => m.IdJogador == IdJogador && m.IdPartida == idPartida);
             if (jogadorPartida == null)
             {
                 return NotFound();
@@ -150,17 +150,17 @@ namespace BoardGamesMVC.Controllers
         // POST: JogadoresPartidas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int idPartida , int idJogador)
         {
-            var jogadorPartida = await _context.JogadoresPartidas.SingleOrDefaultAsync(m => m.IdJogador == id);
+            var jogadorPartida = await _context.JogadoresPartidas.SingleOrDefaultAsync(m => m.IdJogador == idJogador && m.IdPartida == idPartida);
             _context.JogadoresPartidas.Remove(jogadorPartida);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-        private bool JogadorPartidaExists(int id)
+        private bool JogadorPartidaExists(int idPartida, int idJogador)
         {
-            return _context.JogadoresPartidas.Any(e => e.IdJogador == id);
+            return _context.JogadoresPartidas.Any(e => e.IdJogador == idJogador && e.IdPartida == idPartida);
         }
     }
 }
