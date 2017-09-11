@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using BoardGamesMVC.Data;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace BoardGamesMVC
 {
@@ -29,10 +30,13 @@ namespace BoardGamesMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            /*
             services.AddDbContext<BoardGamesContext>();
             BoardGamesContext bgContext = new BoardGamesContext();
             bgContext.Database.EnsureCreated();
+            */
+
+            services.AddDbContext<BoardGamesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Add framework services.
             services.AddMvc();
@@ -63,6 +67,15 @@ namespace BoardGamesMVC
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            var serviceScopeFactory = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+            using (var serviceScope = serviceScopeFactory.CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetService< BoardGamesContext>();
+                dbContext.Database.EnsureCreated();
+            }
+
         }
     }
 }

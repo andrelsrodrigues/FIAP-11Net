@@ -9,11 +9,11 @@ namespace BoardGamesMVC.Models
 {
     public class JogadorPartida
     {
+        public int Pontuacao { get; set; }
         public int PosicaoFinalPartida { get; set; }
-        public int DuracaoPartidaEmMinutos { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdPartida { get; set; }
         public Partida InfoPartida { get; set; }
 

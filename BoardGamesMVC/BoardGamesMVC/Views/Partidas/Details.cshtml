@@ -1,0 +1,42 @@
+@model BoardGamesMVC.Models.Partida
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Partida</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeJogadores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeJogadores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DuracaoPartidaEmMinutos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DuracaoPartidaEmMinutos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoBoardGame)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InfoBoardGame.IdBoardGame)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPartida">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

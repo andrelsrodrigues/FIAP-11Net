@@ -15,9 +15,13 @@ namespace BoardGamesMVC.Models
 
         public int QuantidadeJogadores { get; set; }
         public int DuracaoPartidaEmMinutos { get; set; }
+        public DateTime Data { get; set; }
+
 
         public int IdBoardGame { get; set; }
         public BoardGame InfoBoardGame { get; set; }
+
+        public IEnumerable<JogadorPartida> JogadoresPartidas { get; set; }
 
     }
 }

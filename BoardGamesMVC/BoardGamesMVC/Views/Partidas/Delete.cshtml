@@ -1,0 +1,47 @@
+@model BoardGamesMVC.Models.Partida
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Partida</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="IdPartida" />
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeJogadores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeJogadores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DuracaoPartidaEmMinutos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DuracaoPartidaEmMinutos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InfoBoardGame)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InfoBoardGame.IdBoardGame)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

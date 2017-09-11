@@ -14,9 +14,10 @@ namespace BoardGamesMVC.Models
         public int IdJogador { get; set; }
 
         public string Nome { get; set; }
-        public int Idade { get; set; }
+        public DateTime DataNascimento { get; set; }
 
 
+        public IEnumerable<JogadorPartida> JogadoresPartidas { get; set; }
         public IEnumerable<BoardGame> ListaBoardGames { get; set; }
     }
 }
