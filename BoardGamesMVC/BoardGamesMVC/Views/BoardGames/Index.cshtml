@@ -27,9 +27,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.DuracaoMediaPartidaEmMinutos)
                 </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InfoJogador)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -50,9 +47,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DuracaoMediaPartidaEmMinutos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InfoJogador.IdJogador)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdBoardGame">Edit</a> |

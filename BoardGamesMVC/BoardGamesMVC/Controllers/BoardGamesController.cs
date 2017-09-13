@@ -22,7 +22,7 @@ namespace BoardGamesMVC.Controllers
         // GET: BoardGames
         public async Task<IActionResult> Index()
         {
-            var boardGamesContext = _context.BoardGames.Include(b => b.InfoJogador);
+            var boardGamesContext = _context.BoardGames;
             return View(await boardGamesContext.ToListAsync());
         }
 
@@ -35,7 +35,6 @@ namespace BoardGamesMVC.Controllers
             }
 
             var boardGame = await _context.BoardGames
-                .Include(b => b.InfoJogador)
                 .SingleOrDefaultAsync(m => m.IdBoardGame == id);
             if (boardGame == null)
             {
@@ -65,7 +64,7 @@ namespace BoardGamesMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewData["IdJogador"] = new SelectList(_context.Jogadores, "IdJogador", "IdJogador", boardGame.IdJogador);
+            //ViewData["IdJogador"] = new SelectList(_context.Jogadores, "IdJogador", "IdJogador", boardGame.IdJogador);
             return View(boardGame);
         }
 
@@ -82,7 +81,6 @@ namespace BoardGamesMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdJogador"] = new SelectList(_context.Jogadores, "IdJogador", "IdJogador", boardGame.IdJogador);
             return View(boardGame);
         }
 
@@ -118,37 +116,21 @@ namespace BoardGamesMVC.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            ViewData["IdJogador"] = new SelectList(_context.Jogadores, "IdJogador", "IdJogador", boardGame.IdJogador);
             return View(boardGame);
         }
 
         // GET: BoardGames/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var boardGame = await _context.BoardGames.Where(b => b.IdBoardGame == id).FirstAsync();
 
-            var boardGame = await _context.BoardGames
-                .Include(b => b.InfoJogador)
-                .SingleOrDefaultAsync(m => m.IdBoardGame == id);
             if (boardGame == null)
             {
                 return NotFound();
             }
 
-            return View(boardGame);
-        }
-
-        // POST: BoardGames/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var boardGame = await _context.BoardGames.SingleOrDefaultAsync(m => m.IdBoardGame == id);
             _context.BoardGames.Remove(boardGame);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
 

@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -7342,16 +7342,16 @@
       ]
     },
     "System.Interactive.Async/3.0.0": {
-      "sha512": "UEM+WmG1Oq0bNbPx/E1jaIQ83QOrPfVDUyuYBtG6D6DpB77ytv9flPterMujumpHuoRjSc0ilSB8w41fQc05dw==",
+      "sha512": "iyrgkZz9Dzm0fiPouQszFC3SO/46k6AYd/jG9bu+/o0AoDMaRXtlo3TIuWVNtOuJFd1noL963QouroJ0T3rImw==",
       "type": "package",
       "path": "system.interactive.async/3.0.0",
       "files": [
-        "System.Interactive.Async.3.0.0.nupkg.sha512",
-        "System.Interactive.Async.nuspec",
         "lib/net45/System.Interactive.Async.dll",
         "lib/net45/System.Interactive.Async.xml",
         "lib/netstandard1.0/System.Interactive.Async.dll",
-        "lib/netstandard1.0/System.Interactive.Async.xml"
+        "lib/netstandard1.0/System.Interactive.Async.xml",
+        "system.interactive.async.3.0.0.nupkg.sha512",
+        "system.interactive.async.nuspec"
       ]
     },
     "System.IO/4.3.0": {
@@ -10749,31 +10749,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andrelsr\\.nuget\\packages\\": {}
+    "C:\\Users\\Eric\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\11Net\\FundamentosBancoDadosPersistencia\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
       "projectName": "BoardGamesMVC",
-      "projectPath": "D:\\11Net\\FundamentosBancoDadosPersistencia\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
-      "packagesPath": "C:\\Users\\andrelsr\\.nuget\\packages\\",
-      "outputPath": "D:\\11Net\\FundamentosBancoDadosPersistencia\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\obj\\",
+      "projectPath": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
+      "outputPath": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\obj\\",
       "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\andrelsr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}
@@ -10842,27 +10830,5 @@
         ]
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 1.1.2 to 1.1.0. Reference the package directly from the project to select a different version. \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer.Design (>= 1.1.2) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.2) \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.0)",
-      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v1.1"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 1.1.2 to 1.1.0. Reference the package directly from the project to select a different version. \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.VisualStudio.Web.CodeGeneration.Design (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGenerators.Mvc (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGeneration (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore (>= 1.1.1) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.2) \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.0)",
-      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v1.1"
-      ]
-    }
-  ]
+  }
 }

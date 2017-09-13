@@ -8,3 +8,12 @@ D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMV
 D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.AssemblyInfo.cs
 D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.dll
 D:\11Net\FundamentosBancoDadosPersistencia\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.pdb
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.deps.json
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.runtimeconfig.json
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.runtimeconfig.dev.json
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.dll
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\bin\Debug\netcoreapp1.1\BoardGamesMVC.pdb
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.AssemblyInfo.cs
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.dll
+C:\Users\Eric\Source\Repos\FIAP-11Net\BoardGamesMVC\BoardGamesMVC\obj\Debug\netcoreapp1.1\BoardGamesMVC.pdb

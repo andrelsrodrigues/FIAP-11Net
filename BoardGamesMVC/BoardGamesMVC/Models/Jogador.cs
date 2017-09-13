@@ -13,11 +13,12 @@ namespace BoardGamesMVC.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdJogador { get; set; }
 
+        [Required]
         public string Nome { get; set; }
+
+        [Display(Name ="Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
 
-
-        public IEnumerable<JogadorPartida> JogadoresPartidas { get; set; }
-        public IEnumerable<BoardGame> ListaBoardGames { get; set; }
+        public IEnumerable<JogadorPartida> Partidas { get; set; }
     }
 }

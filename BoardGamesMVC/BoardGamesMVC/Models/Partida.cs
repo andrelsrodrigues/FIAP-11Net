@@ -13,7 +13,6 @@ namespace BoardGamesMVC.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPartida { get; set; }
 
-        public int QuantidadeJogadores { get; set; }
         public int DuracaoPartidaEmMinutos { get; set; }
         public DateTime Data { get; set; }
 
@@ -21,7 +20,7 @@ namespace BoardGamesMVC.Models
         public int IdBoardGame { get; set; }
         public BoardGame InfoBoardGame { get; set; }
 
-        public IEnumerable<JogadorPartida> JogadoresPartidas { get; set; }
+        public IEnumerable<JogadorPartida> Jogadores { get; set; }
 
     }
 }

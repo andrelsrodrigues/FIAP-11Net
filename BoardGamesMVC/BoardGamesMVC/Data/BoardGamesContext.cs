@@ -23,7 +23,7 @@ namespace BoardGamesMVC.Data
 
         public DbSet<BoardGame> BoardGames { get; set; }
         public DbSet<Partida> Partidas { get; set; }
-        public DbSet<JogadorPartida> JogadoresPartidas { get; set; }
+        //public DbSet<JogadorPartida> JogadoresPartidas { get; set; }
         public DbSet<Jogador> Jogadores { get; set; }
 
 
@@ -34,9 +34,11 @@ namespace BoardGamesMVC.Data
             modelBuilder.Entity<JogadorPartida>().ToTable("TBJogadoresPartidas");
             modelBuilder.Entity<Jogador>().ToTable("TBJogadores");
 
-            modelBuilder.Entity<JogadorPartida>().HasKey(k => new { k.IdJogador, k.IdPartida });
-            modelBuilder.Entity<Jogador>().HasMany(jp => jp.JogadoresPartidas).WithOne(p => p.InfoJogador).OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Restrict);
-            modelBuilder.Entity<Partida>().HasMany(jp => jp.JogadoresPartidas).WithOne(p => p.InfoPartida).OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Restrict);
+            modelBuilder.Entity<JogadorPartida>().HasKey(jp => new { jp.IdJogador, jp.IdPartida });
+            modelBuilder.Entity<Jogador>().HasMany(j => j.Partidas);
+            modelBuilder.Entity<Partida>().HasMany(p => p.Jogadores);
+            modelBuilder.Entity<Partida>().HasOne(p => p.InfoBoardGame);
+            modelBuilder.Entity<BoardGame>().HasMany(p => p.Partidas);
         }
     }
 }

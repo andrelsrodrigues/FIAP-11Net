@@ -123,32 +123,17 @@ namespace BoardGamesMVC.Controllers
         }
 
         // GET: Partidas/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var partida = await _context.Partidas.Where(b => b.IdPartida == id).FirstAsync();
 
-            var partida = await _context.Partidas
-                .Include(p => p.InfoBoardGame)
-                .SingleOrDefaultAsync(m => m.IdPartida == id);
             if (partida == null)
             {
                 return NotFound();
             }
 
-            return View(partida);
-        }
-
-        // POST: Partidas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var partida = await _context.Partidas.SingleOrDefaultAsync(m => m.IdPartida == id);
             _context.Partidas.Remove(partida);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
 
