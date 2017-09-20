@@ -130,7 +130,7 @@ namespace BoardGamesMVC.Controllers
             }
 
             _context.BoardGames.Remove(boardGame);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 

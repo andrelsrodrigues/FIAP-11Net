@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -10753,15 +10753,27 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
       "projectName": "BoardGamesMVC",
       "projectPath": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\BoardGamesMVC.csproj",
+      "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Eric\\Source\\Repos\\FIAP-11Net\\BoardGamesMVC\\BoardGamesMVC\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}
@@ -10830,5 +10842,27 @@
         ]
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 1.1.2 to 1.1.0. Reference the package directly from the project to select a different version. \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer.Design (>= 1.1.2) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.2) \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v1.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 1.1.2 to 1.1.0. Reference the package directly from the project to select a different version. \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.VisualStudio.Web.CodeGeneration.Design (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGenerators.Mvc (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGeneration (>= 1.1.1) -> Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore (>= 1.1.1) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.2) \r\n BoardGamesMVC (>= 1.0.0) -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v1.1"
+      ]
+    }
+  ]
 }

@@ -127,7 +127,7 @@ namespace BoardGamesMVC.Controllers
             }
 
             _context.Jogadores.Remove(jogador);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
